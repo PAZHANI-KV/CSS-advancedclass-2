@@ -1,4 +1,6 @@
-body{
+/* Upto line 35, styling is for index.html */
+
+/* body{
     font-size: 1.75rem;
 }
 
@@ -28,6 +30,116 @@ section{
 background-color: bisque;
 border: 2px solid gray;
 padding: 1rem;
-/* overflow: auto;  => old method */
-display: flow-root; /* => new method*/
+overflow: auto;  => old method
+display: flow-root; => new method
+} */
+
+/* The below styling upto line 74 is for app.html (Column chapter Tutorial)*/
+/* 
+body {
+  font-size: 1.5rem;
 }
+
+.column {
+    column-count: 4; /* Line 44 and 45 are just for reference. Dont include those two stylings in code when revising.Keep these two lines commented even when applying all other stylings in this page during reference /*
+    column-width: 20px;
+  columns: 4 250px;
+  column-rule: 3px solid gray;
+  column-gap: 3rem;
+}
+
+.column p{
+    margin-top: 0;
+    margin-bottom: 0; 
+}
+
+.column h2{
+    margin: 0;
+    background-color: gray;
+    color: antiquewhite;
+    padding: 3rem;
+    break-inside: avoid;
+}
+
+.column .quote{
+    margin-top: 1rem;
+    color: orangered;
+    text-align: center;
+    font-size: 3rem;
+    column-span: all;
+}
+
+.nowrap{
+    white-space: nowrap;
+} */
+
+/* The below code upto the line is for index2.html(CSS Position chapter tutorial) */  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+.outer-container{
+    border: 3px dashed black;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+    position: relative;
+}
+
+.inner-container{
+    border: 2px solid blue;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+    /* position: relative; */
+
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+
+}
+
+.absolute{
+    background-color: blue;
+    position: absolute;  /* If a element position is set as absolute, then we have to keep the position of any one of his parents (i.e, outer-container & inner-container in this code example) as relative; so that this absolute element will move accordingly by keeping its relative parent as reference   */
+    top: 0px;
+    left: 0px;
+}
+
+.relative{
+    background-color: red;
+    position: relative;  /* If a element position is set as relative, then there is no need to mention its previous parent's position as relative in the code. (i.e, outer-container & inner-container in this code example) Because, this relative element will keep its immediate parent as relative reference and will move accordingly. */
+    top: 100px;
+    left: 100px;
+}
+
+.fixed{
+    background-color: green;
+    position: fixed; /* If we keep the position of a element as fixed, then it will keep the whole web page as reference and will be moved and completely fixed in a particular place in relative to the webpage*/
+    top: 100px;
+    left: 200px;
+}
+
+.sticky{
+    background-color: black;
+    position: sticky;
+    top: 100px;
+}
+
+
+/* NOTE: The following styling for the whole html page will make the transition between pages and movement from one place of a web page to the other more smoother and beautiful during pressing of any button.
+
+html{
+    scroll-behaviour:smooth;
+} */

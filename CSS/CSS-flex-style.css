@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 2px solid red;
+    gap: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row-reverse; */
+    /* flex-wrap: wrap; */ /*Line 23 can be substituted for line 21 and 22. Line 23 will do the same work which the lines 21 and 22 are doing */
+    flex-flow: row wrap;
+    align-content: center;
+
+}
+
+.box{
+    /* min-width: 100px; */
+    min-height: 100px;
+    background-color: black;
+    color: aliceblue;
+    font-size: 2rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100px; /* This line acts like a supplement foe min-width(Line 29) */
+    /* flex-shrink: 1; */
+
+    flex: 1 1 200px;  /* These Three values indicates=> flex-grow flex-shrink flex-basis */
+
+}
+
+.box:nth-child(2){
+    flex: 2 2 200px;
+    order: -1;  /* If order is 1 then 2 container will move to last. If order is -1 then 2 will move to the first. If order is 0 then 2 will remain in its own position as like as default. */
+
+}
+
+/* Checkout "Flexbox Froggy" website to learn more about Flex Stylings */
